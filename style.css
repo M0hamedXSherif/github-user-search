@@ -1,0 +1,145 @@
+/* تنسيقات عامة */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1e1e1e; /* لون غامق مريح */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #2d2d2d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #4CAF50; /* أخضر جميل */
+}
+
+/* منطقة التحكم (البحث والزر) */
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1; /* يأخذ المساحة المتبقية */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* قائمة المستخدمين */
+ul {
+    list-style: none;
+    max-height: 400px; /* طول محدد للقائمة */
+    overflow-y: auto; /* سكرول لو القائمة طويلة */
+}
+
+li {
+    background-color: #383838;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #4CAF50;
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.02); /* تكبير بسيط عند الوقوف بالماوس */
+    background-color: #444;
+}
+
+/* تنسيق السكرول بار  */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+
+/* تنسيق قسم المفضلة */
+.fav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.fav-list li {
+    background-color: #444;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    border: 1px solid #4CAF50;
+}
+
+.fav-list li:hover {
+    background-color: #4CAF50;
+}
+
+/* زر الإضافة للمفضلة */
+.add-fav-btn {
+    background: transparent;
+    border: 1px solid #aaa;
+    color: #aaa;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* يزق الزرار لليمين */
+}
+
+.add-fav-btn:hover {
+    background: #fff;
+    color: #000;
+}

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>GitHub User Finder 🔍</h1>
+        
+        <div class="controls">
+
+            <input type="text" id="search-input" placeholder="Type a name to search...">
+
+            <div class="favorites-container">
+                <h3>⭐ Favorites</h3>
+                <ul id="fav-list" class="fav-list"></ul>
+            </div>
+
+            <hr style="margin: 20px 0; border-color: #444;">
+
+            <button id="fetch-btn">Load Users</button>
+
+        </div>
+
+        <ul id="users-list">
+            </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
