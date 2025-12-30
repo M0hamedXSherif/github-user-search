@@ -143,3 +143,39 @@ li:hover {
     background: #fff;
     color: #000;
 }
+
+/* --- Dark Mode Styles --- */
+
+/* 1. شكل الزرار */
+.mode-btn {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.mode-btn:hover {
+    background: #555;
+}
+
+/* 2. الألوان لما الوضع الليلي يشتغل */
+body.dark-mode {
+    background-color: #1a1a1a; /* خلفية سوداء هادية */
+    color: #f0f0f0; /* كلام أبيض */
+}
+
+/* تغيير لون عناصر القائمة في الوضع الليلي */
+body.dark-mode li {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #fff;
+}
+
+/* تحسين شكل الصور في الظلام */
+body.dark-mode img {
+    opacity: 0.9;
+}

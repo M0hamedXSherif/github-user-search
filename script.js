@@ -90,3 +90,29 @@ window.removeFav = function(username) {
     localStorage.setItem("githubFavs", JSON.stringify(favorites));
     renderFavorites();
 }
+
+// --- Dark Mode Logic ---
+
+const modeToggleBtn = document.getElementById("mode-toggle");
+const body = document.body;
+
+// 1. فحص الذاكرة عند الفتح (الاسترجاع)
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode"); // لبّس الموقع البدلة السودة
+    modeToggleBtn.innerText = "☀️ Light Mode"; // غير أيقونة الزرار
+}
+
+// 2. التفاعل عند الضغط
+modeToggleBtn.addEventListener("click", () => {
+    // toggle: لو الكلاس موجود شيله، ولو مش موجود حطه
+    body.classList.toggle("dark-mode");
+
+    // دلوقتي نسأل: هل هو لابس البدلة السودة ولا لأ؟
+    if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark"); // احفظ في الذاكرة
+        modeToggleBtn.innerText = "☀️ Light Mode";
+    } else {
+        localStorage.setItem("theme", "light"); // احفظ في الذاكرة
+        modeToggleBtn.innerText = "🌙 Dark Mode";
+    }
+});
